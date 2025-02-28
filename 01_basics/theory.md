@@ -31,3 +31,9 @@ This extra level of indirection makes Python slower than languages that store pr
 ## Mutable:
 - Mutable objects can be modified after creation without creating a new object.
 - Operations modify the same memory location.
+
+# DataType misconception
+- In python there's no datatype of the variable you make, it only holds address to a memory space.
+- But! the value at the memory address has a datatype. So 'type' belongs to the object not its reference.
+- For numbers and strings GC works as usual but not immediately!
+- Each object as its reference count. ref_count
