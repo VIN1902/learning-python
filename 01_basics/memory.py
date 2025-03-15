@@ -17,3 +17,10 @@ list_three[0] = 69
 # list is mutuable at 0x2
 print(list_three) # [69,5,6] at 0x2
 print(list_four) # [4,5,6] at 0x3
+
+name = "vikas"
+print(name)
+name = "harsh"
+# when redefined name then a new mem. space in heap created for value "harsh" and its address was stored in variable called 'name' in stack.
+# so the previous address/reference of value "vikas" in heap is now no longer stored in 'name'. so the "vikas" object is orphaned and hence garbage collector will eventually delete it from heap
+# here string type is immutable cause we never changed value "vikas", instead a new object was created on any reassignment and reference called 'name' now points to new object (stores address of it)
