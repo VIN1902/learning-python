@@ -54,3 +54,41 @@ while factorial_of > 0:
     factorial_ans *= factorial_of
     factorial_of -= 1
 print(factorial_ans)
+
+# 7. keep asking for input until they enter something between 1 and 10
+
+while True:
+    input_question = int(input('Enter a value b/w 1 and 10: '))
+    if input_question > 0 and input_question < 11:
+        print('Your number is', input_question)
+        break
+
+# 8. prime checker
+
+prime_number = 13
+for i in range(2,10):
+    if prime_number == 1:
+        print('{} is prime'.format(prime_number))
+        break
+    elif prime_number % i != 0 and prime_number != i:
+        print('{} is prime'.format(prime_number))
+        break
+    else:
+        print('{} is not prime'.format(prime_number))
+        break
+
+# 9. find list duplicate
+
+duplicate_list = ['apple', 'orange', 'apple', 'banana', 'grape']
+for fruit in duplicate_list:
+    if duplicate_list.count(fruit) > 1:
+        print('{} is duplicate in given list'.format(fruit))
+        break
+
+unique_bucket = set()
+for fruit in duplicate_list:
+    if fruit in unique_bucket:
+        print("Duplicate:",fruit)
+        break
+    unique_bucket.add(fruit)
+
