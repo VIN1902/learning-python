@@ -109,6 +109,15 @@ print(next(gen)) # 8
 '''
 
 '''
+In short:
+- the function with yield returns a generator
+    - this generator has next method
+    - this generator is an iterable
+- so either first create a generator object and then manually call next method on it.
+- or use a loop (cause its an iterable) which automatically does the creation and next calling untill the values are exhausted.
+'''
+
+'''
 Key difference between JS and Python's next method on a generator
 - In js next returns an object with keys value and done, at the end done is set to true. works with generator only.
 - In python next returns just the value, at the end it raises an error. (stopIteration exception) works with any iterable and not just with generators, cause that's how the lang is designed.
